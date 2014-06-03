@@ -1,0 +1,8 @@
+.container
+  .row
+    = simple_form_for @current_user, wrapper: :bootstrap, url: { controller: :activities, action: :setup }, method: :put, html: { class: 'form' } do |f|
+      %fieldset.panel.panel-default
+        %legend.panel-heading
+          %span Garmin Username
+        = f.input :garmin_username, required: true, label: false, placeholder: 'enter your garmin username'
+      = f.submit class: 'btn btn-primary', value: 'Submit'

@@ -1,16 +1,15 @@
 class AccountController < ApplicationController
 
   def login
-    redirect_to Strava::AuthorizationRequest.url
   end
 
   def authorize
     user = AuthenticationService.new(params).authenticate
     if user.present?
       session[:user_id] = user.id
-      render text: "Welcome #{user.first_name} #{user.last_name}"
+      redirect_to activities_url
     else
-      render text: "unauthorized!"
+      render text: "Unable to authenticate with Strava."
     end
   end
 

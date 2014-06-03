@@ -36,10 +36,35 @@ main {
   @extend .container;
   background-color: #eee;
   padding-bottom: 80px;
+  padding-top: 15px;
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
   }
 section {
   @extend .row;
   margin-top: 20px;
   }
+
+// Extend panels for forms
+.panel.panel-default {
+  position: relative;
+
+  legend.panel-heading {
+    float: left;
+    font-size: inherit;
+    padding: 20px 15px;
+
+    span {
+      left: 0;
+      padding: 10px 15px;
+      position: absolute;
+      top: 0;
+    }
+
+  }
+
+  .form-group {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+}

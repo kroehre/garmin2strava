@@ -11,14 +11,13 @@ gem 'figaro'
 gem 'haml-rails'
 gem 'simple_form'
 gem 'httparty'
+gem 'httmultiparty'
 
-group :assets do
-  gem 'sass-rails', '~> 4.0.3'
-  gem 'uglifier', '>= 1.3.0'
-  gem 'coffee-rails', '~> 4.0.0'
-  gem 'jquery-rails'
-  gem 'bootstrap-sass'
-end
+gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'better_errors'

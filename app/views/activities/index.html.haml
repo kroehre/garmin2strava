@@ -1,0 +1,23 @@
+#activity-list
+  %ul.list-group
+    - @activities.each do |activity|
+      %li.list-group-item
+        .row
+          .col-sm-10.col-xs-8
+            .activity-info.row
+              %h4.col-sm-8.col-xs-block
+                = activity.name || DateTime.parse(activity.start_time).strftime('%m/%d/%y %R')
+              .col-sm-4.col-xs-block
+                .row
+                  .col-xs-6
+                    %span.glyphicon.glyphicon-road
+                    #{(activity.distance / 5280).round(1)}mi
+                  .col-xs-6
+                    %span.glyphicon.glyphicon-time
+                    = Time.at(activity.duration).gmtime.strftime('%R')
+
+          =form_tag upload_activities_path, method: :post do
+            = hidden_field_tag :activity_id, activity.id
+            %button.sync-button.btn.btn-primary{ type: 'submit' }
+              %span.glyphicon.glyphicon-upload
+              sync

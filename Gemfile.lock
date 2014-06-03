@@ -85,6 +85,10 @@ GEM
       haml (>= 4.0.0.rc.1)
       hpricot (~> 0.8.6)
       ruby_parser (~> 3.1.1)
+    httmultiparty (0.3.14)
+      httparty (>= 0.7.3)
+      mimemagic
+      multipart-post
     httparty (0.10.2)
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
@@ -102,10 +106,12 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.2)
     mime-types (1.25.1)
+    mimemagic (0.2.1)
     mini_portile (0.6.0)
     minitest (5.3.4)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    multipart-post (2.0.0)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     pg (0.17.1)
@@ -222,6 +228,7 @@ DEPENDENCIES
   figaro
   haml-rails
   html2haml
+  httmultiparty
   httparty
   hub
   jquery-rails
