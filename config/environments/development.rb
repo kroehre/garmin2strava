@@ -34,4 +34,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  Strava.configure do |config|
+    config.authorize_redirect_uri = "http://garmin2strava.local:3000/authorize"
+  end
+
 end
