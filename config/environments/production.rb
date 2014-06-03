@@ -80,4 +80,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  Strava.configure do |config|
+    config.authorize_redirect_uri = "http://www.garmin2strava.com/authorize"
+  end
+
 end
